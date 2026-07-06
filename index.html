@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hana Fkiri — Data Scientist, Healthcare &amp; Supply Chain</title>
+<meta name="description" content="Data Scientist specialized in healthcare data — biobanking, clinical data, supply chain and applied AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12213B;
+    --ink-soft:#4E5A72;
+    --paper:#EEF1EE;
+    --paper-2:#E2E7E2;
+    --card:#F8F9F7;
+    --sage:#3F6E60;
+    --sage-dim:#DCE6E1;
+    --amber:#D98C2B;
+    --rule:#C9D0C9;
+    --danger:#B4483A;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'Inter',sans-serif; font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:.001ms !important; transition-duration:.001ms !important;} }
+  a{color:inherit;}
+  ::selection{background:var(--sage); color:var(--paper);}
+  :focus-visible{outline:2px solid var(--amber); outline-offset:3px;}
+  .display{font-family:'Fraunces',serif;}
+  .mono{font-family:'IBM Plex Mono',monospace; letter-spacing:.02em;}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 28px;}
+
+  .nav{position:sticky; top:0; z-index:50; background:rgba(238,241,238,.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--rule);}
+  .nav-inner{max-width:1080px; margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between;}
+  .nav-mark{display:flex; align-items:center; gap:10px; font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.08em; text-decoration:none; color:var(--ink);}
+  .nav-mark .dot{width:9px; height:9px; border-radius:50%; background:var(--sage); box-shadow:0 0 0 3px var(--sage-dim);}
+  .nav-links{display:flex; gap:28px; font-size:13.5px;}
+  .nav-links a{text-decoration:none; color:var(--ink-soft); border-bottom:1px solid transparent; padding-bottom:2px; transition:color .15s,border-color .15s;}
+  .nav-links a:hover{color:var(--ink); border-color:var(--sage);}
+  @media (max-width:640px){ .nav-links{display:none;} }
+
+  .hero{padding:88px 0 64px;}
+  .hero-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--sage); margin:0 0 22px; display:flex; align-items:center; gap:10px;}
+  .hero-eyebrow::before{content:""; width:26px; height:1px; background:var(--sage);}
+  .hero h1{font-size:clamp(34px,5.2vw,58px); line-height:1.06; font-weight:500; margin:0 0 26px; max-width:16ch; letter-spacing:-.01em; font-family:'Fraunces',serif;}
+  .hero h1 em{font-style:italic; color:var(--sage);}
+  .hero p.lead{font-size:18px; color:var(--ink-soft); max-width:58ch; margin:0 0 34px;}
+  .tag-row{display:flex; flex-wrap:wrap; gap:9px; margin-bottom:40px;}
+  .tag{font-family:'IBM Plex Mono',monospace; font-size:12px; padding:6px 12px; border:1px solid var(--rule); border-radius:20px; color:var(--ink-soft); background:var(--card);}
+  .cta-row{display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
+  .btn{display:inline-flex; align-items:center; gap:8px; font-weight:600; font-size:14.5px; padding:13px 22px; border-radius:2px; text-decoration:none; border:1px solid var(--ink); transition:transform .15s,background .15s,color .15s; cursor:pointer;}
+  .btn-primary{background:var(--ink); color:var(--paper);}
+  .btn-primary:hover{background:var(--sage); border-color:var(--sage); transform:translateY(-1px);}
+  .btn-ghost{background:transparent; color:var(--ink); border-color:var(--rule);}
+  .btn-ghost:hover{border-color:var(--ink); transform:translateY(-1px);}
+
+  section{padding:72px 0;}
+  .section-head{margin-bottom:44px;}
+  .section-num{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--sage); letter-spacing:.1em; margin:0 0 8px;}
+  .section-title{font-family:'Fraunces',serif; font-size:clamp(26px,3vw,34px); font-weight:500; margin:0; letter-spacing:-.01em;}
+  .section-sub{color:var(--ink-soft); max-width:62ch; margin:10px 0 0; font-size:15.5px;}
+  .rule{border:none; border-top:1px solid var(--rule);}
+
+  .timeline{position:relative; padding-left:2px;}
+  .tl-line{position:absolute; left:9px; top:6px; bottom:6px; width:1px; background:var(--rule);}
+  .tl-item{position:relative; padding:0 0 40px 40px;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-dot{position:absolute; left:0; top:4px; width:19px; height:19px; border-radius:50%; background:var(--paper); border:1px solid var(--sage); display:flex; align-items:center; justify-content:center;}
+  .tl-dot::after{content:""; width:7px; height:7px; border-radius:50%; background:var(--sage);}
+  .tl-period{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--sage); margin-bottom:6px;}
+  .tl-title{font-family:'Fraunces',serif; font-size:20px; font-weight:500; margin:0 0 8px;}
+  .tl-text{color:var(--ink-soft); max-width:62ch; font-size:15px; margin:0 0 10px;}
+  .tl-tags{display:flex; flex-wrap:wrap; gap:7px;}
+  .tl-tags span{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); background:var(--paper-2); padding:3px 9px; border-radius:20px;}
+
+  .panel{border:1px solid var(--rule); background:var(--card);}
+  .panel-row{display:grid; grid-template-columns:180px 1fr; border-top:1px solid var(--rule);}
+  .panel-row:first-child{border-top:none;}
+  .panel-label{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--sage); padding:18px 20px; text-transform:uppercase; border-right:1px solid var(--rule);}
+  .panel-value{padding:18px 22px; font-size:15px;}
+  @media (max-width:640px){ .panel-row{grid-template-columns:1fr;} .panel-label{border-right:none; border-bottom:1px solid var(--rule);} }
+
+  /* ---- Access request / unlock bar ---- */
+  .access-bar{border:1px dashed var(--rule); background:var(--card); padding:22px 24px; margin-bottom:36px;}
+  .access-bar h3{font-family:'Fraunces',serif; font-size:18px; margin:0 0 6px; font-weight:500;}
+  .access-bar p{color:var(--ink-soft); font-size:14px; margin:0 0 16px; max-width:60ch;}
+  .access-tabs{display:flex; gap:8px; margin-bottom:16px;}
+  .access-tab{font-family:'IBM Plex Mono',monospace; font-size:12px; padding:7px 14px; border:1px solid var(--rule); background:var(--paper); cursor:pointer; color:var(--ink-soft);}
+  .access-tab.active{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+  .access-panel{display:none;}
+  .access-panel.active{display:block;}
+  .form-row{display:flex; gap:10px; flex-wrap:wrap; margin-bottom:10px;}
+  .form-row input, .form-row textarea{
+    font-family:'Inter',sans-serif; font-size:13.5px; padding:10px 12px; border:1px solid var(--rule);
+    background:var(--paper); color:var(--ink); border-radius:2px; flex:1; min-width:180px;
+  }
+  .form-row textarea{width:100%; resize:vertical; min-height:70px;}
+  .lock-msg{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-soft); margin-top:8px; display:block;}
+  .lock-msg.err{color:var(--danger);}
+  .lock-msg.ok{color:var(--sage);}
+
+  .grid-projects{display:grid; grid-template-columns:repeat(2,1fr); gap:22px;}
+  @media (max-width:760px){ .grid-projects{grid-template-columns:1fr;} }
+
+  .specimen{position:relative; background:var(--card); border:1px solid var(--rule); padding:22px 22px 20px;}
+  .specimen::before{content:""; position:absolute; top:14px; right:14px; width:34px; height:34px; border:1px solid var(--sage); border-radius:50%; opacity:.5;}
+  .specimen-id{font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--sage); margin-bottom:10px;}
+  .specimen-title{font-family:'Fraunces',serif; font-size:19px; font-weight:500; margin:0 0 10px; max-width:80%;}
+  .specimen-teaser{color:var(--ink-soft); font-size:14px; margin:0 0 14px;}
+  .specimen-detail{display:none; font-size:14px; border-top:1px dashed var(--rule); padding-top:14px; margin-top:4px;}
+  .specimen-detail p{margin:0 0 10px;}
+  .specimen-image{width:100%; border:1px solid var(--rule); margin-bottom:12px; display:block; background:var(--paper-2);}
+  .specimen-image-placeholder{
+    width:100%; aspect-ratio:16/9; border:1px dashed var(--rule); background:var(--paper-2);
+    display:flex; align-items:center; justify-content:center; margin-bottom:12px;
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--ink-soft); text-align:center; padding:12px;
+  }
+  .specimen-links{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;}
+  .specimen-links a{font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--sage); text-decoration:underline; text-underline-offset:3px;}
+  body.unlocked .specimen-detail{display:block;}
+  body.unlocked .specimen-teaser{display:none;}
+  .specimen-tags{display:flex; flex-wrap:wrap; gap:6px; margin-top:14px;}
+  .specimen-tags span{font-family:'IBM Plex Mono',monospace; font-size:10.5px; color:var(--ink-soft); background:var(--paper-2); padding:3px 8px; border-radius:20px;}
+  .specimen-locked-tag{display:inline-flex; align-items:center; gap:6px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-soft); margin-top:2px;}
+  body.unlocked .specimen-locked-tag{display:none;}
+
+  .contact-box{border:1px solid var(--rule); background:var(--card); padding:40px 36px; display:flex; flex-wrap:wrap; gap:32px; justify-content:space-between; align-items:center;}
+  .contact-box h3{font-family:'Fraunces',serif; font-size:24px; margin:0 0 8px; font-weight:500;}
+  .contact-box p{color:var(--ink-soft); margin:0; max-width:44ch; font-size:14.5px;}
+
+  footer{border-top:1px solid var(--rule); padding:28px 0; margin-top:20px;}
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top"><span class="dot"></span> HANA FKIRI</a>
+    <div class="nav-links">
+      <a href="#journey">Journey</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <p class="hero-eyebrow">Data Scientist — Healthcare &amp; Supply Chain</p>
+    <h1>I turn complex, sensitive data into <em>reliable decisions</em>.</h1>
+    <p class="lead">From biobanking to clinical research, to predictive models and generative AI — one thread runs through it all: making complex healthcare data trustworthy and useful.</p>
+    <div class="tag-row">
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+      <span class="tag">Power BI</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">NLP</span>
+      <span class="tag">LLM / RAG</span>
+      <span class="tag">Forecasting</span>
+      <span class="tag">Clinical Data</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#projects">View projects</a>
+      <a class="btn btn-ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section id="journey">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-num">01 — Journey</p>
+      <h2 class="section-title">One mission, three scales</h2>
+      <p class="section-sub">Three stages, one thread: bringing order and reliability to complex, sensitive data so researchers, clinicians and operators can decide better.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-line"></div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <p class="tl-period">2019 — 2020 · Nice, Lübeck</p>
+        <h3 class="tl-title">Biobanking &amp; data governance</h3>
+        <p class="tl-text">Structured clinical and biobanking databases, ran quality controls, and contributed to ISO 20387 certification. Led an end-to-end ccfDNA extraction project with statistical analysis in R.</p>
+        <div class="tl-tags"><span>ISO 20387</span><span>LIMS</span><span>R</span><span>CentraXX</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <p class="tl-period">2021 — 2023 · Paris</p>
+        <h3 class="tl-title">Clinical data &amp; trials</h3>
+        <p class="tl-text">Validated multi-site clinical trial datasets, ran anomaly detection on CRF data, ensured GCP compliance. Tracked query resolution rates, protocol deviations and submission timelines.</p>
+        <div class="tl-tags"><span>GCP</span><span>CRF</span><span>REDCap</span><span>Data Quality</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <p class="tl-period">2024 — Present · Riyadh</p>
+        <h3 class="tl-title">AI-augmented data science</h3>
+        <p class="tl-text">Same mission, at greater scale: Python/ML pipelines, NLP for semantic matching, LLM agents, Power BI dashboards — applied to healthcare and hospital supply chain.</p>
+        <div class="tl-tags"><span>Python</span><span>NLP</span><span>LLM / RAG</span><span>Power BI</span><span>Forecasting</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-num">02 — Skills</p>
+      <h2 class="section-title">Skills panel</h2>
+    </div>
+    <div class="panel">
+      <div class="panel-row"><div class="panel-label">Programming</div><div class="panel-value">Python · R · SQL</div></div>
+      <div class="panel-row"><div class="panel-label">ML &amp; AI</div><div class="panel-value">Scikit-learn · Forecasting · NLP · LLM · RAG · Agents (LangGraph)</div></div>
+      <div class="panel-row"><div class="panel-label">Visualization</div><div class="panel-value">Power BI · Streamlit</div></div>
+      <div class="panel-row"><div class="panel-label">Data</div><div class="panel-value">Data Warehousing · Pandas · Cleaning &amp; standardization</div></div>
+      <div class="panel-row"><div class="panel-label">Clinical</div><div class="panel-value">GCP · CRF · Biobanking · ISO 20387</div></div>
+      <div class="panel-row"><div class="panel-label">Languages</div><div class="panel-value">Arabic (native) · French (native) · English (fluent)</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-num">03 — Projects</p>
+      <h2 class="section-title">Case studies</h2>
+      <p class="section-sub">Public teasers below. Full case studies (method, dashboards, results) are access-controlled — request access, or enter a code if you already have one.</p>
+    </div>
+
+    <div class="access-bar">
+      <div class="access-tabs">
+        <div class="access-tab active" id="tab-request" onclick="showTab('request')">Request access</div>
+        <div class="access-tab" id="tab-code" onclick="showTab('code')">I have a code</div>
+      </div>
+
+      <div class="access-panel active" id="panel-request">
+        <h3>Request full access</h3>
+        <p>Tell me who you are and I'll personally review and send you an access code.</p>
+        <form id="access-form" onsubmit="return submitAccessRequest(event)">
+          <div class="form-row">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+          </div>
+          <div class="form-row">
+            <textarea name="message" placeholder="Why you'd like access (company, role, opportunity...)" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send request</button>
+          <span class="lock-msg" id="request-msg"></span>
+        </form>
+      </div>
+
+      <div class="access-panel" id="panel-code">
+        <h3>Enter your access code</h3>
+        <p>If I've already approved your request, enter the code I sent you.</p>
+        <div class="form-row">
+          <input type="text" id="access-code" placeholder="Access code">
+          <button class="btn btn-primary" onclick="unlockPortfolio()" type="button">Unlock</button>
+        </div>
+        <span class="lock-msg" id="lock-msg"></span>
+      </div>
+    </div>
+
+    <div class="grid-projects" id="projects-grid"></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-num">04 — Contact</p>
+      <h2 class="section-title">Let's talk</h2>
+    </div>
+    <div class="contact-box">
+      <div>
+        <h3>Open to new missions</h3>
+        <p>Reach out about a project, a role, or to request full access to the case studies above.</p>
+      </div>
+      <a class="btn btn-primary" href="mailto:hana.fkiri13@gmail.com">Send an email</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span>© 2026 HANA FKIRI</span>
+    <span>RIYADH, KSA · FR / AR / EN</span>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   PROJECT LIST — add new projects here over time.
+   Just copy one object below, fill it in, and it appears
+   automatically on the site. No other code needs to change.
+
+   Fields:
+   - id:        short reference code, e.g. "01"
+   - category:  small label, e.g. "SUPPLY CHAIN"
+   - title:     project title
+   - teaser:    1 sentence, shown to everyone (locked or not)
+   - detail:    fuller description, shown only when unlocked
+   - tags:      array of short skill/tool tags
+   - image:     path to a screenshot, e.g. "assets/replenishment.png"
+                leave as "" if you don't have one yet — a placeholder
+                box will show instead
+   - links:     array of {label, url} — e.g. a Power BI public link,
+                a GitHub repo, a live Streamlit app. Leave as [] if none.
+   ============================================================ */
+  const PROJECTS = [
+    {
+      id: "01", category: "SUPPLY CHAIN",
+      title: "Replenishment forecasting tool",
+      teaser: "Demand forecasting and order recommendations for a hospital network.",
+      detail: "ML-based demand forecasting combined with real-time stock projections (Python, Power BI), built to reduce stockouts and optimize order quantities for procurement teams.",
+      tags: ["Python", "ML Forecasting", "Power BI"],
+      image: "",
+      links: []
+    },
+    {
+      id: "02", category: "SUPPLY CHAIN",
+      title: "Stock reallocation engine",
+      teaser: "Inventory optimization across 20 hospital clusters.",
+      detail: "Analyzed near-expiry and excess inventory to generate reallocation recommendations, improving data accuracy and resource utilization at network scale.",
+      tags: ["Python", "Optimization", "Data Quality"],
+      image: "",
+      links: []
+    },
+    {
+      id: "03", category: "NLP",
+      title: "Semantic matching & master data",
+      teaser: "Automated standardization of hospital item descriptions.",
+      detail: "NLP pipeline for semantic entity matching and classification, ensuring data integrity across multiple hospital procurement systems.",
+      tags: ["NLP", "Classification", "Data Integrity"],
+      image: "",
+      links: []
+    },
+    {
+      id: "04", category: "AGENTIC AI",
+      title: "AI agentic supply chain",
+      teaser: "Multi-agent system for supply chain analysis and decisions.",
+      detail: "A LangGraph-based multi-agent architecture orchestrating data collection, analysis and recommendation across complex supply chain flows.",
+      tags: ["LangGraph", "LLM", "Agents"],
+      image: "",
+      links: []
+    },
+    {
+      id: "05", category: "DASHBOARDS",
+      title: "Operational Power BI dashboards",
+      teaser: "Real-time dashboards for sensitive operations and clinical KPIs.",
+      detail: "Contributed to the Hajj 1447 real-time operational dashboard (pilgrim health & logistics), diabetes care KPI tracking, and supply chain performance monitoring.",
+      tags: ["Power BI", "KPIs", "Reporting"],
+      image: "",
+      links: []
+    },
+    {
+      id: "06", category: "APP",
+      title: "Carbon footprint estimator",
+      teaser: "Web app estimating carbon impact, ML model + Streamlit.",
+      detail: "A machine learning model packaged into a Streamlit app to estimate and visualize carbon footprint from usage data.",
+      tags: ["Streamlit", "ML", "Python"],
+      image: "",
+      links: []
+    }
+  ];
+
+  function renderProjects(){
+    const grid = document.getElementById('projects-grid');
+    grid.innerHTML = PROJECTS.map(p => {
+      const media = p.image
+        ? `<img class="specimen-image" src="${p.image}" alt="${p.title} screenshot">`
+        : `<div class="specimen-image-placeholder">Screenshot coming soon</div>`;
+      const links = p.links && p.links.length
+        ? `<div class="specimen-links">${p.links.map(l => `<a href="${l.url}" target="_blank" rel="noopener">${l.label} →</a>`).join('')}</div>`
+        : '';
+      return `
+        <article class="specimen">
+          <div class="specimen-id">REF · ${p.id} — ${p.category}</div>
+          <h3 class="specimen-title">${p.title}</h3>
+          <p class="specimen-teaser">${p.teaser}</p>
+          <div class="specimen-detail">
+            ${media}
+            <p>${p.detail}</p>
+            ${links}
+          </div>
+          <div class="specimen-locked-tag">🔒 Full detail is access-controlled</div>
+          <div class="specimen-tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+        </article>`;
+    }).join('');
+  }
+  renderProjects();
+
+  // ---- Tabs ----
+  function showTab(name){
+    document.getElementById('tab-request').classList.toggle('active', name==='request');
+    document.getElementById('tab-code').classList.toggle('active', name==='code');
+    document.getElementById('panel-request').classList.toggle('active', name==='request');
+    document.getElementById('panel-code').classList.toggle('active', name==='code');
+  }
+
+  // ---- Access code unlock ----
+  // Change this to whatever code you want to hand out to approved requesters.
+  const ACCESS_CODE = "BIOBANK2026";
+
+  function unlockPortfolio(){
+    const input = document.getElementById('access-code');
+    const msg = document.getElementById('lock-msg');
+    if(input.value.trim().toUpperCase() === ACCESS_CODE){
+      document.body.classList.add('unlocked');
+      msg.textContent = "Portfolio unlocked.";
+      msg.className = "lock-msg ok";
+    } else {
+      msg.textContent = "Incorrect code. Ask me if you need it resent.";
+      msg.className = "lock-msg err";
+    }
+  }
+  document.getElementById('access-code').addEventListener('keydown', e => { if(e.key==='Enter') unlockPortfolio(); });
+
+  // ---- Access request form ----
+  // 1. Go to https://formspree.io, create a free account.
+  // 2. Create a new form, copy its endpoint (looks like https://formspree.io/f/xxxxxxxx)
+  // 3. Paste it below, replacing YOUR_FORM_ID.
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+  async function submitAccessRequest(e){
+    e.preventDefault();
+    const form = e.target;
+    const msg = document.getElementById('request-msg');
+    const data = new FormData(form);
+
+    if(FORMSPREE_ENDPOINT.includes("YOUR_FORM_ID")){
+      msg.textContent = "Form not connected yet — see setup instructions.";
+      msg.className = "lock-msg err";
+      return false;
+    }
+
+    try{
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: data
+      });
+      if(res.ok){
+        msg.textContent = "Request sent — I'll be in touch soon.";
+        msg.className = "lock-msg ok";
+        form.reset();
+      } else {
+        msg.textContent = "Something went wrong. Try emailing me directly.";
+        msg.className = "lock-msg err";
+      }
+    } catch(err){
+      msg.textContent = "Network error. Try emailing me directly.";
+      msg.className = "lock-msg err";
+    }
+    return false;
+  }
+</script>
+
+</body>
+</html>

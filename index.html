@@ -8,121 +8,46 @@
 
   <meta
     name="description"
-    content="Portfolio of Hana Fkiri — BI & Data Analytics across healthcare, clinical data, biobanking, healthcare supply chain, AI and automation."
+    content="Portfolio of Hana Fkiri — BI & Data Analytics, healthcare, clinical research, biobanking, automation and decision support."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- One font family for the whole portfolio -->
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Typography + hero overrides so the whole site uses the same font -->
-  <style>
-    body,
-    button,
-    input,
-    textarea,
-    select,
-    .hero h1,
-    .hero h2,
-    .section h2,
-    .contact h2,
-    .skill-card h3,
-    .project-copy h3,
-    .hero-note p {
-      font-family: "Manrope", Arial, sans-serif !important;
-    }
-
-    .hero {
-      grid-template-columns: 1fr !important;
-      min-height: 560px;
-      gap: 0;
-    }
-
-    .hero-copy {
-      max-width: 980px;
-    }
-
-    .hero h1 {
-      font-size: clamp(52px, 7vw, 88px);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
-      font-weight: 600;
-      margin: 0 0 26px;
-    }
-
-    .hero h1 span {
-      color: var(--blue);
-    }
-
-    .hero-domain {
-      margin: 0 0 24px;
-      color: var(--blue-soft);
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .hero .lead {
-      max-width: 760px;
-      font-size: 16px;
-      line-height: 1.7;
-      margin: 0;
-    }
-
-    .hero-note {
-      display: none !important;
-    }
-
-    .availability {
-      margin-top: 28px;
-    }
-
-    @media (max-width: 560px) {
-      .hero h1 {
-        font-size: 46px;
-      }
-
-      .hero-domain {
-        font-size: 10px;
-        line-height: 1.8;
-      }
-    }
-  </style>
 </head>
 
 <body>
 
 <header class="site-header">
+  <div class="header-inner">
 
-  <a class="brand" href="#top">
-    HANA FKIRI
-  </a>
+    <a class="brand" href="#top">HANA FKIRI</a>
 
-  <nav class="nav">
-    <a href="#skills">Skills</a>
-    <a href="#bi">BI & Data Analytics</a>
-    <a href="#ai">AI & Automation</a>
-    <a href="#curalens">CuraLens</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <nav class="nav">
+      <a href="#skills">Skills</a>
+      <a href="#bi">BI & Analytics</a>
+      <a href="#ai">AI & Automation</a>
+      <a href="#curalens">CuraLens</a>
+      <a href="#about">Background</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-  <a
-    class="outline-btn"
-    href="assets/cv/hana-fkiri-cv.pdf"
-    target="_blank"
-  >
-    Download CV ↓
-  </a>
+    <a
+      class="outline-btn header-cv"
+      href="assets/cv/hana-fkiri-cv.pdf"
+      target="_blank"
+      rel="noopener"
+    >
+      Download CV ↓
+    </a>
 
+  </div>
 </header>
 
 
@@ -138,14 +63,10 @@
       BI & <span>Data Analytics</span>
     </h1>
 
-    <p class="hero-domain">
-      Healthcare · Clinical Data · Biobanking · Healthcare Supply Chain
-    </p>
-
-    <p class="lead">
-      I build BI and analytics solutions across healthcare,
-      clinical data and healthcare supply chain, combining SQL,
-      Power BI, data modeling and automation.
+    <p class="hero-lead">
+      I turn complex data into clear, reliable insights and practical
+      decision-support solutions — from data modeling and reporting
+      to automation and analytical problem solving.
     </p>
 
     <div class="hero-tags">
@@ -157,19 +78,12 @@
     </div>
 
     <div class="actions">
-
-      <a class="primary-btn" href="#bi">
-        View my work →
-      </a>
-
-      <a class="outline-btn" href="#contact">
-        Get in touch
-      </a>
-
+      <a class="primary-btn" href="#bi">View my work →</a>
+      <a class="outline-btn" href="#contact">Get in touch</a>
     </div>
 
     <p class="availability">
-      Riyadh · France / Europe
+      Saudi Arabia · France · Europe
     </p>
 
   </div>
@@ -182,20 +96,16 @@
 <section class="section shell" id="skills">
 
   <div class="section-intro">
-
-    <p class="section-index">
-      01. <span>SKILLS</span>
-    </p>
+    <p class="section-index">01. <span>SKILLS</span></p>
 
     <h2>
-      Skills, connected to real work.
+      Skills connected to real work.
     </h2>
 
     <p>
-      Each capability is linked to the projects and environments
-      where I apply it.
+      A combination of BI, data analysis and automation,
+      supported by domain experience in healthcare and clinical data.
     </p>
-
   </div>
 
 
@@ -215,14 +125,12 @@
       <p class="label">RELATED WORK</p>
 
       <p>
-        MOH Dashboards<br>
-        KFSHRC Supply Chain<br>
+        Healthcare Dashboards<br>
+        Supply Chain Analytics<br>
         Incident Reporting
       </p>
 
-      <a href="#bi">
-        Explore work →
-      </a>
+      <a href="#bi">Explore work →</a>
 
     </article>
 
@@ -241,14 +149,12 @@
       <p class="label">RELATED EXPERIENCE</p>
 
       <p>
-        ICON · INSERM<br>
+        Clinical Research<br>
         Biobanking<br>
         Healthcare Analytics
       </p>
 
-      <a href="#about">
-        View journey →
-      </a>
+      <a href="#about">View background →</a>
 
     </article>
 
@@ -267,14 +173,10 @@
       <p class="label">RELATED WORK</p>
 
       <p>
-        Supply Chain AI Agent<br>
-        NLP Matching<br>
-        Planning Automation
+        Supply Chain AI Agent
       </p>
 
-      <a href="#ai">
-        Explore work →
-      </a>
+      <a href="#ai">Explore work →</a>
 
     </article>
 
@@ -290,21 +192,16 @@
   <div class="split-head">
 
     <div>
-
-      <p class="section-index">
-        02. <span>BI & DATA ANALYTICS</span>
-      </p>
+      <p class="section-index">02. <span>BI & DATA ANALYTICS</span></p>
 
       <h2>
         Dashboards built for decision-making.
       </h2>
-
     </div>
 
     <p>
-      Interactive reporting designed to make operational,
-      healthcare and supply-chain data easier to understand,
-      monitor and act on.
+      Interactive reporting designed to make complex operational
+      data easier to understand, monitor and act on.
     </p>
 
   </div>
@@ -317,15 +214,12 @@
       <small>Interactive demo coming soon</small>
     </div>
 
+
     <div class="project-copy">
 
-      <p class="label">
-        FEATURED · HEALTHCARE ANALYTICS
-      </p>
+      <p class="label">FEATURED · BI & ANALYTICS</p>
 
-      <h3>
-        Operational Healthcare Analytics
-      </h3>
+      <h3>Operational Healthcare Analytics</h3>
 
       <p>
         BI reporting for healthcare operations, bringing KPIs,
@@ -336,6 +230,7 @@
         <span>Power BI</span>
         <span>SQL</span>
         <span>DAX</span>
+        <span>Data Modeling</span>
         <span>RLS</span>
       </div>
 
@@ -344,47 +239,30 @@
   </article>
 
 
-  <div class="project-strip">
+  <div class="project-list">
 
     <article>
-
-      <div class="thumb">
-        PREVIEW
-      </div>
-
       <div>
+        <p class="project-number">01</p>
         <h4>Incident & Recovery Reporting</h4>
-        <p>Power BI · SQL · DAX</p>
       </div>
-
+      <p>Power BI · SQL · DAX</p>
     </article>
 
-
     <article>
-
-      <div class="thumb">
-        PREVIEW
-      </div>
-
       <div>
-        <h4>Supply Chain Analytics</h4>
-        <p>Power BI · SQL · Data Modeling</p>
+        <p class="project-number">02</p>
+        <h4>Healthcare Supply Chain Analytics</h4>
       </div>
-
+      <p>Power BI · SQL · Data Modeling</p>
     </article>
 
-
     <article>
-
-      <div class="thumb">
-        PREVIEW
-      </div>
-
       <div>
-        <h4>Operational Planning</h4>
-        <p>Power BI · Analytics</p>
+        <p class="project-number">03</p>
+        <h4>Operational Analytics</h4>
       </div>
-
+      <p>Power BI · Analytics</p>
     </article>
 
   </div>
@@ -394,25 +272,21 @@
 
 <!-- AI -->
 
-<section class="section shell ai-section" id="ai">
+<section class="section shell" id="ai">
 
   <div class="split-head">
 
     <div>
-
-      <p class="section-index">
-        03. <span>AI & AUTOMATION</span>
-      </p>
+      <p class="section-index">03. <span>AI & AUTOMATION</span></p>
 
       <h2>
         From repetitive work to useful automation.
       </h2>
-
     </div>
 
     <p>
-      AI-assisted tools and automated workflows designed around
-      concrete analytical and operational needs.
+      AI-assisted tools designed around concrete analytical
+      and operational needs.
     </p>
 
   </div>
@@ -422,13 +296,9 @@
 
     <div class="project-copy">
 
-      <p class="label">
-        FEATURED · AGENTIC AI
-      </p>
+      <p class="label">FEATURED · AGENTIC AI</p>
 
-      <h3>
-        Supply Chain AI Agent
-      </h3>
+      <h3>Supply Chain AI Agent</h3>
 
       <p>
         Multi-agent decision-support system combining inventory
@@ -450,7 +320,9 @@
       <small>Video preview coming soon</small>
     </div>
 
-    <!-- Later replace the placeholder above with:
+    <!--
+    Later replace the placeholder above with:
+
     <video class="project-video" autoplay muted loop playsinline controls>
       <source src="assets/videos/supply-chain-ai-agent.mp4" type="video/mp4">
     </video>
@@ -465,19 +337,13 @@
 
 <section class="section shell curalens" id="curalens">
 
-  <div>
+  <div class="curalens-copy">
 
-    <p class="section-index">
-      04. <span>CURALENS</span>
-    </p>
+    <p class="section-index">04. <span>CURALENS</span></p>
 
-    <span class="status">
-      IN DEVELOPMENT
-    </span>
+    <span class="status">IN DEVELOPMENT</span>
 
-    <h2>
-      CuraLens
-    </h2>
+    <h2>CuraLens</h2>
 
     <p class="curalens-lead">
       Healthcare analytics project bringing data modeling,
@@ -534,27 +400,24 @@
 </section>
 
 
-<!-- ABOUT -->
+<!-- BACKGROUND -->
 
 <section class="section shell" id="about">
 
   <div class="split-head">
 
     <div>
-
-      <p class="section-index">
-        05. <span>ABOUT</span>
-      </p>
+      <p class="section-index">05. <span>BACKGROUND</span></p>
 
       <h2>
-        From biomedical research to healthcare analytics.
+        Experience & Background
       </h2>
-
     </div>
 
     <p>
-      My background connects life sciences and clinical research
-      with hands-on analytics, BI and data solution development.
+      My background combines healthcare, clinical research and BI,
+      data modeling, reporting and automation — with a focus on
+      structured problem solving and turning complex data into actionable insights.
     </p>
 
   </div>
@@ -562,43 +425,35 @@
 
   <div class="journey">
 
-    <div>
-      <b>01</b>
-      <span>
-        Biomedical<br>
-        Research
-      </span>
-    </div>
+    <article>
+      <p class="journey-number">01</p>
+      <h3>Biomedical Research & Biobanking</h3>
+      <p>Research · Biobanking · Data Quality</p>
+    </article>
 
-    <i></i>
+    <article>
+      <p class="journey-number">02</p>
+      <h3>Clinical Research</h3>
+      <p>Clinical Data · GCP · Data Quality</p>
+    </article>
 
-    <div>
-      <b>02</b>
-      <span>
-        Clinical Research<br>
-        & Life Sciences
-      </span>
-    </div>
+    <article>
+      <p class="journey-number">03</p>
+      <h3>Healthcare BI & Analytics</h3>
+      <p>Reporting · KPIs · Operational Analytics</p>
+    </article>
 
-    <i></i>
+    <article>
+      <p class="journey-number">04</p>
+      <h3>Healthcare Supply Chain Analytics</h3>
+      <p>Inventory · Planning · Decision Support</p>
+    </article>
 
-    <div>
-      <b>03</b>
-      <span>
-        Healthcare<br>
-        Analytics
-      </span>
-    </div>
-
-    <i></i>
-
-    <div>
-      <b>04</b>
-      <span>
-        Data, BI<br>
-        & Automation
-      </span>
-    </div>
+    <article>
+      <p class="journey-number">05</p>
+      <h3>Data & Automation</h3>
+      <p>SQL · Data Modeling · BI · AI</p>
+    </article>
 
   </div>
 
@@ -610,20 +465,16 @@
 <section class="contact shell" id="contact">
 
   <div>
-
-    <p class="section-index">
-      06. <span>CONTACT</span>
-    </p>
+    <p class="section-index">06. <span>CONTACT</span></p>
 
     <h2>
       Let’s build something useful with data.
     </h2>
 
     <p>
-      Open to data analytics, BI and healthcare data opportunities,
-      consulting and freelance projects.
+      Open to BI, data analytics and data-driven projects across industries,
+      with particular experience in healthcare and life sciences.
     </p>
-
   </div>
 
 
@@ -655,13 +506,9 @@
 
   <span>HANA FKIRI</span>
 
-  <span>
-    BI & Data Analytics · Healthcare · Clinical Data · Biobanking · Healthcare Supply Chain
-  </span>
+  <span>BI & Data Analytics · Saudi Arabia · France · Europe</span>
 
-  <span>
-    © 2026
-  </span>
+  <span>© 2026</span>
 
 </footer>
 

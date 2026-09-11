@@ -8,18 +8,94 @@
 
   <meta
     name="description"
-    content="Portfolio of Hana Fkiri — BI & Data Analytics across healthcare, biobanking, AI and automation."
+    content="Portfolio of Hana Fkiri — BI & Data Analytics across healthcare, clinical data, biobanking, healthcare supply chain, AI and automation."
   />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <!-- One font family for the whole portfolio -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Typography + hero overrides so the whole site uses the same font -->
+  <style>
+    body,
+    button,
+    input,
+    textarea,
+    select,
+    .hero h1,
+    .hero h2,
+    .section h2,
+    .contact h2,
+    .skill-card h3,
+    .project-copy h3,
+    .hero-note p {
+      font-family: "Manrope", Arial, sans-serif !important;
+    }
+
+    .hero {
+      grid-template-columns: 1fr !important;
+      min-height: 560px;
+      gap: 0;
+    }
+
+    .hero-copy {
+      max-width: 980px;
+    }
+
+    .hero h1 {
+      font-size: clamp(52px, 7vw, 88px);
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      font-weight: 600;
+      margin: 0 0 26px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero-domain {
+      margin: 0 0 24px;
+      color: var(--blue-soft);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero .lead {
+      max-width: 760px;
+      font-size: 16px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .hero-note {
+      display: none !important;
+    }
+
+    .availability {
+      margin-top: 28px;
+    }
+
+    @media (max-width: 560px) {
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero-domain {
+        font-size: 10px;
+        line-height: 1.8;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -58,36 +134,25 @@
 
   <div class="hero-copy">
 
-    <p class="hero-name">
-      HANA FKIRI
-    </p>
-
     <h1>
       BI & <span>Data Analytics</span>
     </h1>
 
-    <p class="kicker hero-specialties">
-      HEALTHCARE · BIOBANKING · AI & AUTOMATION
+    <p class="hero-domain">
+      Healthcare · Clinical Data · Biobanking · Healthcare Supply Chain
     </p>
 
-    <div class="hairline"></div>
-
-    <h2>
-      Turning data into clear,
-      <em>reliable insights.</em>
-    </h2>
-
     <p class="lead">
-      I build analytics, BI and data solutions using SQL,
-      Power BI and Python, with experience across healthcare,
-      clinical research and biobanking.
+      I build BI and analytics solutions across healthcare,
+      clinical data and healthcare supply chain, combining SQL,
+      Power BI, data modeling and automation.
     </p>
 
     <div class="hero-tags">
-      <span>SQL</span>
       <span>Power BI</span>
-      <span>Python</span>
+      <span>SQL</span>
       <span>Data Modeling</span>
+      <span>Python</span>
       <span>AI & Automation</span>
     </div>
 
@@ -104,26 +169,10 @@
     </div>
 
     <p class="availability">
-      Riyadh, Saudi Arabia · France / Europe ·
-      Full-time & freelance opportunities
+      Riyadh · France / Europe
     </p>
 
   </div>
-
-
-  <aside class="hero-note">
-
-    <span class="micro-line"></span>
-
-    <p>
-      Analytics built with
-      <br>
-      <em>clarity, structure</em>
-      <br>
-      and purpose.
-    </p>
-
-  </aside>
 
 </section>
 
@@ -139,8 +188,7 @@
     </p>
 
     <h2>
-      Skills, connected to
-      <em>real work.</em>
+      Skills, connected to real work.
     </h2>
 
     <p>
@@ -248,9 +296,7 @@
       </p>
 
       <h2>
-        Dashboards built for
-        <br>
-        <em>decision-making.</em>
+        Dashboards built for decision-making.
       </h2>
 
     </div>
@@ -359,9 +405,7 @@
       </p>
 
       <h2>
-        From repetitive work to
-        <br>
-        <em>useful automation.</em>
+        From repetitive work to useful automation.
       </h2>
 
     </div>
@@ -402,21 +446,14 @@
 
 
     <div class="media-placeholder">
-
       <span>AI AGENT DEMO</span>
-
-      <small>
-        Video preview coming soon
-      </small>
-
+      <small>Video preview coming soon</small>
     </div>
 
-    <!--
-      Later, replace the media-placeholder above with:
-
-      <video class="project-video" autoplay muted loop playsinline controls>
-        <source src="assets/videos/supply-chain-ai-agent.mp4" type="video/mp4">
-      </video>
+    <!-- Later replace the placeholder above with:
+    <video class="project-video" autoplay muted loop playsinline controls>
+      <source src="assets/videos/supply-chain-ai-agent.mp4" type="video/mp4">
+    </video>
     -->
 
   </article>
@@ -510,9 +547,7 @@
       </p>
 
       <h2>
-        From biomedical research
-        <br>
-        to <em>healthcare analytics.</em>
+        From biomedical research to healthcare analytics.
       </h2>
 
     </div>
@@ -581,9 +616,7 @@
     </p>
 
     <h2>
-      Let’s build something
-      <br>
-      <em>useful with data.</em>
+      Let’s build something useful with data.
     </h2>
 
     <p>
@@ -623,7 +656,7 @@
   <span>HANA FKIRI</span>
 
   <span>
-    BI & Data Analytics · Healthcare · Biobanking · AI & Automation
+    BI & Data Analytics · Healthcare · Clinical Data · Biobanking · Healthcare Supply Chain
   </span>
 
   <span>

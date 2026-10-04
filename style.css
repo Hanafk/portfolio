@@ -250,3 +250,5 @@ footer {
   .picker-result { flex-direction: column; align-items: flex-start; }
   footer { flex-direction: column; }
 }
+.edu-line { margin: 22px 0 0; color: var(--muted); font-size: 14px; }
+.edu-line b { color: var(--text-soft); font-weight: 600; }

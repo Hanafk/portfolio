@@ -74,11 +74,13 @@
 
   <!-- Case 1 -->
   <article class="case">
-    <div class="case-visual">
-      <!-- To add a visual: <img src="assets/img/nheoc.png" alt="Anonymized NHEOC dashboard"> -->
-      <p class="visual-kicker">MINISTRY OF HEALTH · NHEOC</p>
-      <p class="visual-big">20 regions</p>
-      <p class="visual-small">4 dashboards in production · 2 formally approved</p>
+    <div class="case-visual has-img gallery">
+      <a href="assets/img/nheoc-escalation-report.png" target="_blank" rel="noopener">
+        <img src="assets/img/nheoc-escalation-report.png" alt="Recurrent incident escalation report built in Power BI, facility names blurred" loading="lazy">
+      </a>
+      <a href="assets/img/nheoc-compliance-report.png" target="_blank" rel="noopener">
+        <img src="assets/img/nheoc-compliance-report.png" alt="Monthly data compliance report by region built in Power BI" loading="lazy">
+      </a>
     </div>
     <div class="case-copy">
       <p class="label">BI & ANALYTICS · EMERGENCY OPERATIONS</p>
@@ -97,11 +99,9 @@
 
   <!-- Case 2 -->
   <article class="case reverse">
-    <div class="case-visual">
-      <p class="visual-kicker">KFSHRC · SUPPLY CHAIN</p>
-      <p class="visual-big">2 days → 5 min</p>
-      <p class="visual-small">Purchase order planning, automated</p>
-    </div>
+    <a class="case-visual has-img" href="assets/img/kfshrc-supplier-scorecard.jpg" target="_blank" rel="noopener">
+      <img src="assets/img/kfshrc-supplier-scorecard.jpg" alt="Supplier performance scorecard built in Power BI, supplier names and amounts blurred" loading="lazy">
+    </a>
     <div class="case-copy">
       <p class="label">AUTOMATION · HOSPITAL SUPPLY CHAIN</p>
       <h3>Supply chain automation and supplier performance</h3>
@@ -119,11 +119,9 @@
 
   <!-- Case 3 -->
   <article class="case">
-    <div class="case-visual">
-      <p class="visual-kicker">HEALTH HOLDING COMPANY · OWN INITIATIVE</p>
-      <p class="visual-big">~SAR 200M</p>
-      <p class="visual-small">of stock identified for reallocation in a first run</p>
-    </div>
+    <a class="case-visual has-img" href="assets/img/hhc-reallocation-engine.jpg" target="_blank" rel="noopener">
+      <img src="assets/img/hhc-reallocation-engine.jpg" alt="Stock reallocation engine in Streamlit, transfer network map between hospital clusters" loading="lazy">
+    </a>
     <div class="case-copy">
       <p class="label">PYTHON · DECISION SUPPORT</p>
       <h3>Stock reallocation engine across 20 hospital clusters</h3>
@@ -267,7 +265,7 @@
   <form class="contact-form" id="contact-form">
     <label>Your name<input name="name" required autocomplete="name"></label>
     <label>Company<input name="company" autocomplete="organization"></label>
-    <label>Message<textarea name="message" rows="4" required placeholder="Role, location, timing…"></textarea></label>
+    <label>Message<textarea name="message" rows="4" required></textarea></label>
     <button class="primary-btn" type="submit">Send message →</button>
     <p class="form-note">Opens your email app with the message ready to send.</p>
   </form>

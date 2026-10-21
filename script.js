@@ -87,7 +87,7 @@ const DELIVERABLES = {
     images: ["assets/img/kfshrc-supplier-scorecard_2.jpg"],
     context: "One pillar of the program is improving suppliers: reliable suppliers, competitive pricing and timely delivery. But KFSHRC had no objective way to measure supplier performance.",
     did: "Delivered, as a proof of concept, a Power BI scorecard rating every supplier on 5 KPIs against targets (on-time delivery, in-full delivery, competitive price, SLA compliance, quality acceptance), with a total score, a segment (preferred, needing improvement, underperforming), the trend versus the previous period, and the top and bottom 10. Designed it as a governance tool, linking scores to contracts, SLAs, penalties and audit.",
-    result: "POC signed by the client, who found it simple and immediately useful. Next step: connecting it to live data and onboarding suppliers." },
+    result: "Clear visibility on supplier performance: procurement can quickly identify top and underperforming suppliers and base contract, renewal and penalty decisions on objective scores. Deliverable signed off by the client." },
   expedite: { client: "KFSHRC · Supply Chain", title: "Expedite Planning Tool",
     figure: ["2 days → 5 min", "Excel VBA automation"],
     context: "Planners spent more than two days identifying which purchase orders to expedite.",

@@ -305,3 +305,6 @@ footer {
 .modal-text .car { grid-template-columns: 1fr; gap: 2px; }
 .modal-text .car dd { margin-bottom: 14px; }
 @media (max-width: 900px) { .modal-box { grid-template-columns: 1fr; } .modal { padding: 12px; } }
+/* ===== CARDS: show full screenshots ===== */
+.deliv-thumb { aspect-ratio: auto; display: flex; align-items: center; justify-content: center; padding: 10px; min-height: 190px; }
+.deliv-thumb img { height: auto; max-height: 260px; object-fit: contain; object-position: center; }

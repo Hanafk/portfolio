@@ -1,21 +1,17 @@
 
- // ===== CV PICKER =====
+ // ========================================
+ // CV PICKER
+ // ========================================
 
 const CVS = {
   ksa: {
-    label: "Saudi Arabia",
-    lang: "English",
-    note: "includes nationality and Iqama status"
+    label: "Saudi Arabia"
   },
   france: {
-    label: "France",
-    lang: "Written in French",
-    note: "for roles in France"
+    label: "France"
   },
   switzerland: {
-    label: "Switzerland",
-    lang: "English",
-    note: "for European roles"
+    label: "Switzerland"
   }
 };
 
@@ -24,7 +20,7 @@ const PROFILES = {
   healthcare: "Healthcare Data"
 };
 
-// Exact filenames stored in assets/cv/
+// Exact PDF filenames in assets/cv/
 const CV_FILES = {
   ksa: {
     data: "Hana_Fkiri_CV_KSA_Data.pdf",
@@ -81,8 +77,8 @@ function render() {
   document.getElementById("cv-title").textContent =
     `CV · ${PROFILES[state.profile]} · ${c.label}`;
 
-  document.getElementById("cv-meta").textContent =
-    `${c.lang}, ${c.note} · PDF`;
+  // No additional CV description
+  document.getElementById("cv-meta").textContent = "";
 
   const link = document.getElementById("cv-link");
 
@@ -125,7 +121,9 @@ initialState();
 render();
 
 
-// ===== COPY EMAIL =====
+// ========================================
+// COPY EMAIL
+// ========================================
 
 document.querySelectorAll(".copy-btn").forEach(btn =>
   btn.addEventListener("click", async () => {
@@ -143,7 +141,9 @@ document.querySelectorAll(".copy-btn").forEach(btn =>
 );
 
 
-// ===== CONTACT FORM =====
+// ========================================
+// CONTACT FORM
+// ========================================
 
 document.getElementById("contact-form").addEventListener(
   "submit",
@@ -160,7 +160,9 @@ document.getElementById("contact-form").addEventListener(
 );
 
 
-// ===== DELIVERABLE DETAILS (MODAL) =====
+// ========================================
+// DELIVERABLE DETAILS (MODAL)
+// ========================================
 
 const DELIVERABLES = {
   hajj: {
@@ -244,7 +246,9 @@ const DELIVERABLES = {
 };
 
 
-// ===== MODAL FUNCTIONS =====
+// ========================================
+// MODAL FUNCTIONS
+// ========================================
 
 const modal = document.getElementById("modal");
 
